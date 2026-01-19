@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Appointment } from '../types';
 import { ChevronLeft, ChevronRight, Clock, User } from 'lucide-react';
 
-const MOCK_APPOINTMENTS: Appointment[] = [
+const MOCK_APPOINTMENTS = [
   { id: '1', date: '2023-10-25', time: '09:00 AM', doctorName: 'Dr. Sarah Smith', specialty: 'Cardiology', status: 'booked' },
   { id: '2', date: '2023-10-25', time: '10:30 AM', doctorName: 'Dr. John Doe', specialty: 'General', status: 'available' },
   { id: '3', date: '2023-10-25', time: '02:00 PM', doctorName: 'Dr. Emily Chen', specialty: 'Dermatology', status: 'available' },
@@ -11,8 +10,8 @@ const MOCK_APPOINTMENTS: Appointment[] = [
   { id: '6', date: '2023-10-27', time: '09:00 AM', doctorName: 'Dr. Ian Malcolm', specialty: 'Neurology', status: 'available' },
 ];
 
-export const AppointmentCalendar: React.FC = () => {
-  const [selectedDate, setSelectedDate] = useState<string>('2023-10-25');
+export const AppointmentCalendar = () => {
+  const [selectedDate, setSelectedDate] = useState('2023-10-25');
 
   // Simple date navigation logic for demo purposes
   const dates = ['2023-10-25', '2023-10-26', '2023-10-27', '2023-10-28', '2023-10-29'];
