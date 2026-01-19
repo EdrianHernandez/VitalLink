@@ -1,17 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Message } from '../types';
 import { Send, Paperclip, MoreVertical, Shield } from 'lucide-react';
 
-const MOCK_MESSAGES: Message[] = [
+const MOCK_MESSAGES = [
   { id: '1', sender: 'provider', text: 'Hello! I reviewed your latest blood work. Everything looks stable.', timestamp: '10:30 AM' },
   { id: '2', sender: 'patient', text: 'That is great news, Dr. Smith. Should I continue with the current dosage?', timestamp: '10:32 AM' },
   { id: '3', sender: 'provider', text: 'Yes, please continue the Lisinopril as prescribed. Let’s schedule a follow-up in 3 months.', timestamp: '10:35 AM' },
 ];
 
-export const SecureMessaging: React.FC = () => {
-  const [messages, setMessages] = useState<Message[]>(MOCK_MESSAGES);
+export const SecureMessaging = () => {
+  const [messages, setMessages] = useState(MOCK_MESSAGES);
   const [newMessage, setNewMessage] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -24,7 +23,7 @@ export const SecureMessaging: React.FC = () => {
   const handleSend = () => {
     if (!newMessage.trim()) return;
     
-    const msg: Message = {
+    const msg = {
         id: Date.now().toString(),
         sender: 'patient',
         text: newMessage,
