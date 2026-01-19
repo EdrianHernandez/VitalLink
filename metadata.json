@@ -1,0 +1,8 @@
+{
+  "name": "VitalLink Patient Portal",
+  "description": "A comprehensive telemedicine portal for patients to manage appointments, consult with doctors via video, view medical history, and communicate securely.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
