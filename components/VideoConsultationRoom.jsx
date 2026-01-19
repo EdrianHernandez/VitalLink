@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mic, MicOff, Video, VideoOff, PhoneOff, MessageSquare, Settings, ShieldCheck } from 'lucide-react';
 
-export const VideoConsultationRoom: React.FC = () => {
+export const VideoConsultationRoom = () => {
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoOff, setIsVideoOff] = useState(false);
 
