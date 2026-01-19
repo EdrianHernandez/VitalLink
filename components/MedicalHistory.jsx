@@ -1,8 +1,7 @@
 import React from 'react';
-import { MedicalRecord } from '../types';
 import { FileText, Pill, Calendar, Download } from 'lucide-react';
 
-const MOCK_HISTORY: MedicalRecord[] = [
+const MOCK_HISTORY = [
   {
     id: '101',
     date: 'Oct 10, 2023',
@@ -24,7 +23,7 @@ const MOCK_HISTORY: MedicalRecord[] = [
   }
 ];
 
-export const MedicalHistory: React.FC = () => {
+export const MedicalHistory = () => {
   return (
     <div className="flex flex-col h-full space-y-6">
       <div className="flex justify-between items-end">
