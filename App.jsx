@@ -3,11 +3,10 @@ import { AppointmentCalendar } from './components/AppointmentCalendar';
 import { VideoConsultationRoom } from './components/VideoConsultationRoom';
 import { MedicalHistory } from './components/MedicalHistory';
 import { SecureMessaging } from './components/SecureMessaging';
-import { ViewState } from './types';
 import { LayoutDashboard, Video, FileText, MessageSquare, Activity, LogOut, Bell } from 'lucide-react';
 
-const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<ViewState>('calendar');
+const App = () => {
+  const [currentView, setCurrentView] = useState('calendar');
 
   const renderContent = () => {
     switch (currentView) {
@@ -24,7 +23,7 @@ const App: React.FC = () => {
     }
   };
 
-  const NavItem = ({ view, icon: Icon, label }: { view: ViewState; icon: React.ElementType; label: string }) => (
+  const NavItem = ({ view, icon: Icon, label }) => (
     <button
       onClick={() => setCurrentView(view)}
       className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 group ${
